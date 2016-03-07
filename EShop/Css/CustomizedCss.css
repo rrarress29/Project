@@ -1,0 +1,97 @@
+﻿
+.box {
+  border: 6px solid #949599;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+}
+
+.centertext
+{
+    text-align:center;
+}
+
+
+#headertextsmall {
+    font-size:50%;
+    font-family: Arial;
+    
+}
+
+#headertext
+{
+    padding-right:3em;
+    color:azure;
+
+}
+
+
+#footer {
+    clear:both;
+    text-align:center;
+    margin-top:18%;
+ }
+
+
+
+#contact
+{   border-style:solid;
+    border:solid;
+    
+    width: 100%;
+    height: auto;
+}
+
+#pageheader
+{
+   position:static;
+   padding-top:3%;
+}
+
+.homeImages
+{   
+    background-color: aqua;
+    border-bottom-left-radius:0.5em;
+    border-bottom-right-radius:0.5em;
+    border-top-left-radius:0.5em;
+    border-top-right-radius:0.5em;
+    margin:1% 10% 10% 10%;
+    padding-top:2%;
+    padding-bottom:1%;
+    clear:both;
+}
+
+.carouselC
+{
+    
+    border-bottom-left-radius:0.5em;
+    border-bottom-right-radius:0.5em;
+    border-top-left-radius:0.5em;
+    border-top-right-radius:0.5em;
+}
+
+body
+{
+    background-color:antiquewhite;
+}
+
+.contactPage
+{
+    background-color: aqua;
+    border-bottom-left-radius:0.5em;
+    border-bottom-right-radius:0.5em;
+    border-top-left-radius:0.5em;
+    border-top-right-radius:0.5em;
+    margin-bottom:10%;
+    margin-top:0%;
+    margin-right:5%;
+    margin-left:5%;
+    clear:both;
+}
+
+.viewCart
+{
+    margin-left:2%;
+    margin-right:2%;
+}

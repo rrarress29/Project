@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>EShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CDN for bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+    
+    <!-- Boostrap files  (Backup files --use when the cdn' don't work)-->
+    <!-- <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+         <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="Css/CustomizedCss.css">
+</head>
+
+<body>
+    
+        <!--Navigation menu-->
+        <header>
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="ProductPage.html">Products</a></li>
+                        <li><a href="ViewCartPage.html">Cart</a></li>
+                        <li><a href="ContactPage.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div>
+                 
+        </div>
+        <!--Jumbotron-->
+        <div class="jumbotron centertext" style="background-image:url(Images/jumbo.jpg)">
+            <h1 style="color:whitesmoke">Sportswear<small id="headertextsmall"><a href="ProductPage.html">Just one click away</a> <br />The best sportswear quality at the lowest price!</small></h1>        
+         </div>
+
+
+    <!--Carousel-->
+    <div class="row centertext homeImages">
+        <div id="my-carousel" class="carousel slide " data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#my-carousel" data-slide-to="1"></li>
+                <li data-target="#my-carousel" data-slide-to="2"></li>
+                <li data-target="#my-carousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner  carouselC">
+                <div class="item active">
+                    <img alt=" first slide" src="Images/CarouselTennis.jpg">
+                    <div class=" carousel-caption">
+
+                        <p>Tennis gear and accessories.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img alt="Second slide" src="Images/CarouselSoccer.jpg">
+                    <div class="carousel-caption">
+
+                        <p>Soccer gear and accessories.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img alt="Third slide" src="Images/CarouselBasketball.jpg">
+                    <div class="carousel-caption">
+
+                        <p>Basketball gear and accessories.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img alt="Fourth slide" src="Images/Carouselgolf.jpg">
+                    <div class="carousel-caption">
+
+                        <p>Golf gear and accessories.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <a class="left carousel-control" href="#my-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#my-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <!--Products presentesion-->
+    <div class="row centertext homeImages">
+
+        <div class="panel panel-default">
+            <div class="panel-body" style="background-color:azure">
+                <h4>Sports Products</h4>
+            </div>
+        </div>
+    
+          
+
+        <div class="col-xs-6 col-md-3">     
+            <a href="ProductPage.html" class="thumbnail">
+                <img src="Images/TennisGear1.png" alt="Tennis gear">
+                <p>Tennis gear</p>
+            </a>
+        </div>
+        
+            <div class="col-xs-6 col-md-3">
+                <a href="ProductPage.html" class="thumbnail">
+                    <img src="Images/SoccerGear.png" alt="Soccer gear">
+                    <p>Soccer gear</p>
+                </a>
+            </div>
+       
+
+        <div class="col-xs-6 col-md-3" >
+            <a href="ProductPage.html" class="thumbnail">
+                <img src="Images/basketballgear.png" alt="Basketball gear">
+                <p>Basketball gear</p>
+            </a>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="ProductPage.html" class="thumbnail">
+                <img src="Images/golfgear.png" alt="Golf gear">
+                <p>Golf gear</p>
+            </a>
+        </div>
+
+    </div>
+    
+        <!--Footer bar-->
+        <div id="footer" class="navbar-fixed-bottom">
+            <p>Copyright © EShop Cluj 2016. All rights reserved ©.</p>
+        </div>
+     
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins CDN) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <!--Jquery refered file for backup in case the CDN doesn't work-->
+        <!--<script src="Js/jquery-1.12.0.min.js"></script>-->
+        <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!-- CDN javascript for google map -->
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    
+</body>
+</html>

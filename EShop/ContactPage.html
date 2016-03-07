@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <title>EShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CDN for bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+
+    <!-- Boostrap files  (Backup files --use when the cdn' don't work)-->
+    <!-- <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+         <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="Css/CustomizedCss.css">
+    
+
+    
+
+
+
+
+</head>
+<body>
+    <!--Navigation menu-->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="ProductPage.html">Products</a></li>
+                    <li><a href="ViewCartPage.html">Cart</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+
+    
+
+    
+
+    
+
+
+
+    <!-- Google map container-->
+    <div class="container-fluid contactPage">
+       
+            <table style="float:left">
+                <thead>
+                    <tr>
+                        <th>
+                            <h3>Contact form</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2"></span>
+                            <input type="text" maxlength="30" size="25" value="" id="UserName" name="Name" class="form-control" placeholder="Insert your name" required aria-describedby="sizing-addon2">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2"></span>
+                            <input type="text" class="form-control" size="25" value="" id="UserEmail" name="Email" maxlength="30" placeholder="Insert your email" required aria-describedby="sizing-addon2">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="contactmessage"></label>
+                            <input class="form-control" id="UserMessage"  name="Message" type="text" maxlength="200" required>
+                        </div>
+                        *Enter a minimum of 20 characters.
+                        <input class="btn btn-default" id="btnSubmit" type="submit" value="submit" onclick="setCookie()" />
+                        
+                    </td>
+                </tr>
+            </table>
+     
+        
+
+        <input class="btn btn-default" id="btnSubmit1" type="submit" value="Get" onclick="getCookie()" />
+        <input id="Submit1" type="submit" value="Clear" onclick="clearCookie()"/>
+
+
+
+
+
+
+        <!--Contact Details-->
+        <div class="panel panel-default" style="font-family:Arial;font-style:normal;float:right; margin-top:1%">
+            <div class=" panel-heading">
+            <h3 class="panel-title">Contact Details</h3>
+        </div>
+            <div class="panel-body">
+                <div class="panel-body">
+                    <div class=" panel-heading">
+                        <h4 class="panel-title">Address</h4>
+                    </div>
+                    <div class="panel-body">
+                        Cluj-Napoca, Street Avram Iancu 5, Polus Center<br/>
+                        Phone number: 0264 xxx xxx
+                    </div>
+                    
+                </div>
+            <div class="panel-body">
+                <div class=" panel-heading">
+                    <h4 class="panel-title">Working program</h4>
+                </div>   
+                <div class="panel-body">
+                    Monday - Friday : 08:00 - 23:00<br />
+                    Saturday : 08:00 - 18:00<br />
+                    Sunday : closed
+                </div>                 
+            </div>           
+        </div>        
+    </div>
+
+        <!--Google location map-->
+        <div class="container" style="clear:both;margin-bottom:2%;">
+           
+            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+            <div style="overflow:hidden;height:21.250em;margin:auto;">
+                <!--I changed the initial width:18.000em;-->
+                <div id="gmap_canvas" class="img-thumbnail img-responsive" style="height:21.250em;width:18.000em;"></div>
+                <style>
+                    #gmap_canvas img {
+                        max-width: none !important;
+                        background: none !important;
+                    }
+                </style>
+                <a class="google-map-code" href="http://www.themecircle.net" id="get-map-data"></a>
+            </div>
+
+        </div>
+           
+        </div>
+    
+
+
+
+
+
+    <!--Footer bar-->
+    <footer>
+        <div id="footer" class="navbar-fixed-bottom">
+            <p>Copyright © EShop Cluj 2016. All rights reserved ©.</p>
+        </div>
+    </footer>
+    <!--Javascript for displaying the location on google map-->
+    <script type="text/javascript">
+        function init_map() {
+            var myOptions = { zoom: 14, center: new google.maps.LatLng(46.75032095140796, 23.533207658789024), mapTypeId: google.maps.MapTypeId.HYBRID };
+            map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+            marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(46.75032095140796, 23.533207658789024) });
+            infowindow = new google.maps.InfoWindow({ content: "<b>Cluj</b><br/>Avram Iancu<br/> Cluj-Napoca" });
+            google.maps.event.addListener(marker, "click", function () { infowindow.open(map, marker); });
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!--Jquery refered file for backup in case the CDN doesn't work-->
+    <!--<script src="Js/jquery-1.12.0.min.js"></script>-->
+    <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- CDN javascript for google map -->
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/Js/Messages.js"></script>
+
+
+   
+</body>
+</html>

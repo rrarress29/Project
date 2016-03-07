@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>EShop</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CDN for bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+
+    <!-- Boostrap files  (Backup files --use when the cdn' don't work)-->
+    <!-- <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+         <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="Css/CustomizedCss.css">
+
+
+
+</head>
+<body>
+    <!--Navigation menu-->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="ViewCartPage.html">Cart</a></li>
+                    <li><a href="ContactPage.html">Contact Us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+
+
+
+
+    <!--Cart Counter-->   
+        <div class="btn-group-vertical" style="margin:10% 0%;position:fixed;" role="group" aria-label="...">
+            <div class="btn-group">
+                <label role="contentinfo" id="lblCart" class="label-info"></label>
+                <button type="button" value="submit" class="btn btn-default" onclick="multiCall()">Go to cart</button>
+            </div>
+        </div>
+    
+
+
+
+
+    <!--Products price-->
+    <div class="row homeImages ">
+        <!--Tennis thumbial-->
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="Images/TennisGear1.png" alt="Tennis gear">
+                <div class="product-description centertext" data-name="TennisGear" data-price="120">
+                    <h3 class="product-name">Tennis Gear</h3>
+                    <p class="product-price">&euro; 120</p>
+
+                    <p><a class="btn btn-primary" id="btnTennis" role="button">+ Add to cart</a></p>
+                    <p><a class="btn btn-danger" id="btnTennis-" role="button">- Add to cart</a></p>
+                    <input type="number" size="2" maxlength="2" min="0" max="20" value="0" id="tennisC" />
+
+                </div>
+            </div>
+        </div>
+        <!--Soccer thumbial-->
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="Images/soccergear.png" alt="Soccer gear">
+                <div class="product-description centertext" data-name="SoccerGear" data-price="120">
+                    <h3 class="product-name">Soccer gear</h3>
+                    <p class="product-price">&euro; 150</p>
+
+                    <p><a class="btn btn-primary" id="btnSoccer" role="button">+ Add to cart</a></p>
+                    <p><a class="btn btn-danger" id="btnSoccer-" role="button">- Add to cart</a></p>
+                    <input type="number" size="2" maxlength=" 2" min="0" max="20" value="0" id="soccerC" />
+                </div>
+            </div>
+        </div>
+
+
+        <!--Basketball thumbial-->
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="Images/basketballgear.png" alt="Basketball gear">
+                <div class="product-description centertext" data-name="BasketballGear" data-price="120">
+                    <h3 class="product-name">Basketball gear</h3>
+                    <p class="product-price">&euro; 130</p>
+
+                    <p><a class="btn btn-primary" id="btnBasketball" role="button">+ Add to cart</a></p>
+                    <p><a class="btn btn-danger" id="btnBasketball-" role="button">- Add to cart</a></p>
+                    <input type="number" size="2" maxlength="2" min="0" max="20" value="0" id="basketballC" />
+                </div>
+            </div>
+        </div>
+        <!--Golf thumbial-->
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="Images/golfgear.png" alt="Golf gear">
+                <div class="product-description centertext" data-name="GolfGear" data-price="120">
+                    <h3 class="product-name">Golf gear</h3>
+                    <p class="product-price">&euro; 140</p>
+
+                    <p><a class="btn btn-primary" id="btnGolf" role="button">+ Add to cart</a></p>
+                    <p><a class="btn btn-danger" id="btnGolf-" role="button">- Add to cart</a></p>
+                    <input type="number" size="2" maxlength="2" min="0" max="20" value="0" id="golfC" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Footer bar-->
+    <div id="footer" class="navbar-fixed-bottom">
+        <p>Copyright © EShop Cluj 2016. All rights reserved ©.</p>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!--Jquery refered file for backup in case the CDN doesn't work-->
+    <!--<script src="Js/jquery-1.12.0.min.js"></script>-->
+    <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- CDN javascript for google map -->
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--Javascript functions-->
+    <script src="/Js/productPage.js"></script>
+
+
+
+
+
+</body>
+</html>

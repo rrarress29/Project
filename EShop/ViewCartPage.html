@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>EShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CDN for bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+
+    <!-- Boostrap files  (Backup files --use when the cdn' don't work)-->
+    <!-- <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+         <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="Css/CustomizedCss.css">
+
+
+
+</head>
+<body>
+    <!--Navigation menu-->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="ProductPage.html">Products</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="ContactPage.html">Contact Us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </header>
+
+    <div class="row homeImages ">
+
+        <div class="panel panel-default viewCart">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Selected items</div>
+
+            <!-- Table -->
+            <table class="table" style="background-color:aliceblue">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price per 1 quantity</th>
+                    <th>Price</th>
+                    <th>Delete item</th>
+                </tr>
+                <tr id="tennisOrder">
+                    <td></td>
+                    <td><p class="product-name">Tennis Gear</p></td>
+                    <td><input class="lbl" type="text" size="2" maxlength="2" min="0" max="20" value="0" id="tennisC1" /></td>
+                    <td><p class="product-price">&euro; 120</p></td>
+                   
+                    <td><label role="contentinfo" id="lblTennis" class="label-info"></label></td>
+                    <td><input id="deleteTennis" class="del" type="reset" value="reset" /></td>
+                </tr>
+                <tr id="soccerOrder">
+                    <td></td>
+                    <td><p class="product-name">Soccer gear</p></td>
+                    <td><input class="lbl" type="text" size="2" maxlength=" 2" min="0" max="20" value="0" id="soccerC1" /></td>
+                    <td><p class="product-price">&euro; 150</p></td>
+                    
+                    <td><label role="contentinfo" id="lblSoccer" class="label-info"></label></td>
+                    <td><input id="deleteSoccer" class="del" type="reset" value="reset" /></td>
+                </tr>
+                <tr id="basketballOrder">
+                    <td></td>
+                    <td><p class="product-name">Basketball gear</p></td>
+                    <td><input class="lbl" type="text" size="2" maxlength="2" min="0" max="20" value="0" id="basketballC1" /></td>
+                    <td><p class="product-price">&euro; 130</p></td>
+                    
+                    <td><label role="contentinfo" id="lblBasketball" class="label-info"></label></td>
+                    <td><input id="deleteBasketball" type="reset" class="del" value="reset" /></td>
+                </tr>
+                <tr id="golfOrder">
+                    <td></td>
+                    <td><p class="product-name">Golf gear</p></td>
+                    <td><input class="lbl" type="text" size="2" maxlength="2" min="0" max="20" value="0" id="golfC1" /></td>
+                    <td><p class="product-price">&euro; 140</p></td>
+                
+                    <td><label role="contentinfo" id="lblGolf" class="label-info"></label></td>
+                    <td><input id="deleteGolf" type="reset" value="reset" class="del" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label role="contentinfo" id="lblCart" class="label-info"></label></td>
+                    <td>Total Cost</td>
+                    <td><label role="contentinfo" id="lblCost" class="label-info"></label></td>
+                </tr>
+
+            </table>
+        </div>
+       
+
+        <!--Actions -->
+        <div class="row" >
+            <div class="col-sm-6 col-md-3" style="float:right;margin-right:2%">
+
+                <input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
+            </div>
+            <div class="col-sm-6 col-md-3" style="float:left;margin-left:2%">
+                <a href="ProductPage.html" class="btn">Continue Shopping</a>
+
+                <a href="ContactPage.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--Footer bar-->
+    <div id="footer" class="navbar-fixed-bottom">
+        <p>Copyright © EShop Cluj 2016. All rights reserved ©.</p>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!--Jquery refered file for backup in case the CDN doesn't work-->
+    <!--<script src="Js/jquery-1.12.0.min.js"></script>-->
+    <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- CDN javascript for google map -->
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/Js/productPage.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+            function(){
+
+                getOrderCookie();
+                          
+
+
+function hideRow(){
+                if (document.getElementById("tennisC1").value == "0")
+                {
+                   
+                    $("#tennisOrder").hide();
+                }
+                if (document.getElementById("soccerC1").value == "0") {
+                    
+                    $("#soccerOrder").hide();
+                }
+                if (document.getElementById("basketballC1").value == "0") {
+                    
+                    $("#basketballOrder").hide();
+                }
+                if (document.getElementById("golfC1").value == "0") {
+                   
+                    $("#golfOrder").hide();
+                }              
+}
+hideRow();
+           
+var ob = {
+
+    totalPrice: parseInt(document.getElementById("tennisC1").value) * 120 + parseInt(document.getElementById("soccerC1").value) * 150 + parseInt(document.getElementById("basketballC1").value) * 130 + parseInt(document.getElementById("golfC1").value) * 140,
+    totalQuantity: parseInt(document.getElementById("tennisC1").value) + parseInt(document.getElementById("soccerC1").value) + parseInt(document.getElementById("basketballC1").value) + parseInt(document.getElementById("golfC1").value),
+    tnPrice: parseInt(document.getElementById("tennisC1").value) * 120,
+    scPrice: parseInt(document.getElementById("soccerC1").value) * 150,
+    bskPrice: parseInt(document.getElementById("basketballC1").value) * 130,
+    glfPrice: parseInt(document.getElementById("golfC1").value) * 140,
+    tnQ: parseInt(document.getElementById("tennisC1").value),
+    scQ: parseInt(document.getElementById("soccerC1").value),
+    bskQ: parseInt(document.getElementById("basketballC1").value),
+    glfQ: parseInt(document.getElementById("golfC1").value)
+}
+
+function deleteCartRows() {
+    $("#deleteTennis").click(function () {
+        ob.totalPrice = ob.totalPrice - ob.tnPrice;
+        ob.totalQuantity = ob.totalQuantity - ob.tnQ;
+
+        $("#lblCost").empty();
+        $("#lblCost").append(ob.totalPrice);
+
+        $('#lblCart').empty();
+        $('#lblCart').append(ob.totalQuantity);
+        $("#tennisOrder").hide();
+
+    });
+
+    $("#deleteSoccer").click(function () {
+        ob.totalPrice = ob.totalPrice - ob.scPrice;
+        ob.totalQuantity = ob.totalQuantity - ob.scQ;
+
+        $("#lblCost").empty();
+        $("#lblCost").append(ob.totalPrice);
+
+        $('#lblCart').empty();
+        $('#lblCart').append(ob.totalQuantity);
+        $("#soccerOrder").hide();
+
+    });
+    $("#deleteBasketball").click(function () {
+        ob.totalPrice = ob.totalPrice - ob.bskPrice;
+        ob.totalQuantity = ob.totalQuantity - ob.bskQ;
+
+        $("#lblCost").empty();
+        $("#lblCost").append(ob.totalPrice);
+
+        $('#lblCart').empty();
+        $('#lblCart').append(ob.totalQuantity);
+        $("#basketballOrder").hide();
+
+    });
+    $("#deleteGolf").click(function () {
+        ob.totalPrice = ob.totalPrice - ob.glfPrice;
+        ob.totalQuantity = ob.totalQuantity - ob.glfQ;
+
+        $("#lblCost").empty();
+        $("#lblCost").append(ob.totalPrice);
+
+        $('#lblCart').empty();
+        $('#lblCart').append(ob.totalQuantity);
+
+        $("#golfOrder").hide();
+
+    });
+}
+deleteCartRows();
+
+                function updateLabel() {
+
+                    $("#lblTennis").empty();
+                    $("#lblTennis").append(ob.tnPrice);
+
+                    $("#lblSoccer").empty();
+                    $("#lblSoccer").append(ob.scPrice);
+
+                    $("#lblBasketball").empty();
+                    $("#lblBasketball").append(ob.bskPrice);
+
+                    $("#lblGolf").empty();
+                    $("#lblGolf").append(ob.glfPrice);
+
+
+                    $("#lblCost").empty();
+                    $("#lblCost").append(ob.totalPrice);
+
+                    $('#lblCart').empty();
+                    $('#lblCart').append(ob.totalQuantity);
+                };
+                updateLabel();
+
+                $(".lbl").change(function() {
+                 
+                    $("#lblTennis").empty();
+                    $("#lblTennis").append(ob.tnPrice);
+
+                    $("#lblSoccer").empty();
+                    $("#lblSoccer").append(ob.scPrice);
+
+                    $("#lblBasketball").empty();
+                    $("#lblBasketball").append(ob.bskPrice);
+
+                    $("#lblGolf").empty();
+                    $("#lblGolf").append(ob.glfPrice);
+
+
+                    $("#lblCost").empty();
+                    $("#lblCost").append(ob.totalPrice);
+                   
+                    $('#lblCart').empty();
+                    $('#lblCart').append(ob.totalQuantity);
+
+                });
+                        
+
+            });
+
+       
+
+
+            
+
+    </script>
+
+</body>
+</html>
